@@ -11,24 +11,202 @@ html {
     scroll-behavior: smooth;
 }
 
+/************** CUSTOM VARIABLES***************
+**************************************************/
+
+:root {
+
+      /* COLORS  */
+
+    --text-color: #fff;
+    --text-second-color: #d2d2d2;
+    --aside-bg-color: #000000;
+    --main-bg-color: #141922;
+    --footer-bg-color: #282828;
+
+
+}
+
+
+/************** REUSABLE CLASSES ***************
+**************************************************/
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+a:hover ,
+button:hover {
+    cursor: pointer;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+
+/******************* HEADER *********************/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 50px;
+    width: calc(100% - 50px);
+    height: 5rem;
+    background-color: var(--main-bg-color);
+}
+
+header .upgrade {
+    height: 100%;
+    width: 100%;
+    justify-content: flex-end;
+    background-color: rgba(0,0,0,0.4);
+}
+
+header .upgrade .btn{
+    padding: 10px 28px;
+    border-radius: 25px;
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid white;
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
 
 
 
+/******************* ASIDE *********************/
+
+
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: calc(100vh - 5rem);
+    background-color: var(--aside-bg-color);
+}
+
+
+/******************* MAIN *********************/
+
+main {
+    position: relative;
+    top: 5rem;
+    left: 50px;
+    background-color: var(--main-bg-color);
+    height: calc(100vh - 10rem);
+    width: calc(100% - 50px);
+    overflow: auto;
+}
+
+
+/******************* FOOTER *********************/
+
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: var(--footer-bg-color);
+    width: 100%;
+    height: 5rem;
+}
 
 
 /********************* MEDIA QUERIES ****************
 ******************************************************/
 
+/********** TABLET SMALL ***********/
+
 @media screen and (min-width: 552px) {
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 241px;
+        width: calc(100% - 241px);
+        height: 5rem;
+    }
+
+    aside {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 241px;
+        height: calc(100vh - 5rem);
+        background-color: var(--aside-bg-color);
+    }
+
+    main {
+        position: relative;
+        top: 5rem;
+        left: 241px;
+        background-color: var(--main-bg-color);
+        height: calc(100vh - 10rem);
+        width: calc(100% - 241px);
+        overflow: auto;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        background-color: var(--footer-bg-color);
+        width: 100%;
+        height: 5rem;
+    }  
     
 }
+
+/********** TABLET LARGE ***********/
 
 
 @media screen and (min-width: 640px) {
     
 }
 
+/********** LAPTOP TO LARGER DESKTOP  ***********/
+
 
 @media screen and (min-width: 878px) {
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 241px;
+        width: calc(100% - 241px);
+        height: 5rem;
+    }
+
+    aside {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 241px;
+        height: calc(100vh - 5rem);
+        background-color: var(--aside-bg-color);
+    }
+
+    main {
+        position: relative;
+        top: 5rem;
+        left: 241px;
+        background-color: var(--main-bg-color);
+        height: calc(100vh - 10rem);
+        width: calc(100% - 241px);
+        overflow: auto;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        background-color: var(--footer-bg-color);
+        width: 100%;
+        height: 5rem;
+    }  
     
 }
+   
