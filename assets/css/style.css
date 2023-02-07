@@ -190,7 +190,7 @@ footer {
         width: 241px;
         height: calc(100vh - 5rem);
         background-color: var(--aside-bg-color);
-        padding: 1.3rem 0 0.5rem 1.5rem;
+        padding: 1.3rem 0 0.5rem 1.3rem;
     }
 
     aside img {
@@ -220,10 +220,6 @@ footer {
         margin-bottom: 0.5rem;
     }
 
-    aside .menu-nav {
-        margin-bottom: 20px;
-    }
-
     .spotify-logo-sm {
         display: none;
     }
@@ -234,7 +230,7 @@ footer {
     }
 
     aside .playlist-ctn {
-        height: 75%;
+        height: 80%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
