@@ -91,6 +91,14 @@ button:hover {
     margin-bottom: 10px;
 }
 
+.mr-3 {
+    margin-right: 5px;
+}
+
+.ml-3 {
+    margin-left: 5px;
+}
+
 .container-top {
     height: calc(100vh - 5rem);
 }
@@ -279,8 +287,92 @@ footer {
     width: 100%;
     z-index: 400;
     background-color: var(--footer-bg-color);
+    color: var(--text-color);
     height: 5rem;
+    justify-content: space-between;
 } 
+
+footer .left,
+footer .right {
+    width: 25%;
+    padding-left: 1.3rem;
+}
+
+footer .center {
+    width: 50%;
+}
+
+footer .left {
+    justify-content: flex-start;
+}
+
+footer .left  .song {
+    margin-right: 10px;
+}
+
+footer .left .song-playing {
+    width: 40px;
+    height: 40px;
+    margin-right: 6px;
+}
+
+footer .left .song-playing-name,
+footer .right ul li i, 
+footer .center .options-bar span {
+    font-size: 0.8rem;
+}
+
+footer .left .song-playing img {
+    width: 100%;
+}
+
+footer .left .song .song-name,
+footer .left .like {
+    color: var(--text-second-color);
+}
+
+footer .right ul {
+    justify-content: flex-end;
+    padding-right: 5px;
+}
+
+footer .right ul li {
+    margin: 3px;
+}
+
+footer .right ul li:nth-of-type(4),
+footer .center .options-bar > div {
+    background-color: var(--text-second-color);
+    height: 3px;
+    border-radius: 5px;
+}
+
+footer .right ul li:nth-of-type(4) {
+    width: 80px;
+}
+
+footer .center .options-bar > div {
+    width: 150px;
+}
+
+footer .right ul li:nth-of-type(4) > .volume-bar,
+footer .center .options-bar .options-volume-bar {
+    background-color: var(--text-color);
+    height: 3px;
+    width: 40%;
+}
+
+footer .center .options ul li {
+    padding: 8px;
+}
+
+footer .center .options ul li i {
+    font-size: 1rem;
+}
+
+footer .center .options ul li .fa-circle-play {
+    font-size: 1.8rem;
+}
 
 
 /********************* MEDIA QUERIES ****************
@@ -407,6 +499,26 @@ footer {
     .hidden {
         display: inline-block;
     }
+
+    footer .left  .song {
+        margin-right: 30px;
+    }
+
+    footer .left .like {
+        display: flex;
+    }
+
+    footer .left .like > div {
+        margin: 0 5px;
+    }
+
+    footer .right ul li:nth-of-type(4) {
+        width: 100px;
+    }
+    
+    footer .center .options-bar > div {
+        width: 180px;
+    }
   
 }
 
@@ -444,6 +556,18 @@ footer {
         background-color: var(--footer-bg-color);
         height: 5rem;
     } 
+
+    footer .right ul li:nth-of-type(4) {
+        width: 120px;
+    }
+    
+    footer .center .options-bar > div {
+        width: 250px;
+    }
+
+    footer .right ul li {
+        margin: 6px;
+    }
 
     
 }
