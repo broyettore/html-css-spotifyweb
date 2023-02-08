@@ -24,8 +24,30 @@ html {
     --main-bg-color: #141922;
     --footer-bg-color: #282828;
 
-
 }
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #141922 #141922;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 1px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #141922;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #141922;
+    border-radius: 10px;
+    border: 3px none #ffffff;
+  }
+  
 
 
 /************** REUSABLE CLASSES ***************
@@ -98,7 +120,7 @@ header .upgrade .btn {
     color: var(--text-color);
     border: 1px solid white;
     font-weight: 600;
-    margin-right: 0.5rem;
+    margin-right: 0.8rem;
     transition: ease .40s;
 }
 
