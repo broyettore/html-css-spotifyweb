@@ -52,10 +52,16 @@ button:hover {
 .column {
     display: flex;
     flex-direction: column;
+}
+
+.column-center {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-.hidden {
+.hidden,
+.play-hover {
     display: none;
 }
 
@@ -63,17 +69,20 @@ button:hover {
     margin-bottom: 10px;
 }
 
+.container-top {
+    height: calc(100vh - 5rem);
+}
+
 
 /******************* HEADER *********************/
 
 header {
-    position: fixed;
+    position: absolute;
     top: 0;
-    left: 50px;
-    width: calc(100% - 50px);
+    width: 100%;
     height: 5rem;
     background-color: var(--main-bg-color);
-}
+} 
 
 header .upgrade {
     height: 100%;
@@ -82,7 +91,7 @@ header .upgrade {
     background-color: rgba(0,0,0,0.4);
 }
 
-header .upgrade .btn{
+header .upgrade .btn {
     padding: 10px 28px;
     border-radius: 25px;
     background-color: transparent;
@@ -90,17 +99,19 @@ header .upgrade .btn{
     border: 1px solid white;
     font-weight: 600;
     margin-right: 0.5rem;
+    transition: ease .40s;
+}
+
+header .upgrade .btn:hover {
+    transform: scale(1.070);
 }
 
 
 /******************* ASIDE *********************/
 
 aside {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 50px;
-    height: calc(100vh - 5rem);
+    height: 100%;
     background-color: var(--aside-bg-color);
     color: var(--text-second-color);
     padding: 0.5rem 0;
@@ -141,31 +152,113 @@ aside .playlist-ctn .playlist-bottom img {
     border-radius: 50%;
 }
 
-
-
-
 /******************* MAIN *********************/
 
 main {
-    position: relative;
-    top: 5rem;
-    left: 50px;
     background-color: var(--main-bg-color);
-    height: calc(100vh - 10rem);
+    height: 100%;
     width: calc(100% - 50px);
     overflow: auto;
+    position: relative;
 }
+
+.main-content {
+    margin-top: 6rem;
+    padding: 0 24px;
+}
+
+.main-content  nav {
+    font-size: 0.8rem;
+    font-weight: 800;
+    align-items: flex-start;
+}
+
+.main-content  nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* .main-content  nav ul li {
+    
+} */
+
+.main-content  nav ul li  a {
+    color: var(--text-second-color);
+}
+
+.main-content  nav ul li:hover  a {
+    color: var(--text-color);
+}
+
+
+.recently-played,
+.user-taste,
+.famous-artist {
+    margin-top: 2rem;
+    color: var(--text-color);
+}
+
+.recently-played h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.user-taste h5,
+.famous-artist h5 {
+    font-size: 0.9rem;
+    margin: 0.5rem 0 1rem;
+}
+
+.recently-played h3,
+.user-taste h3,
+.famous-artist h3 {
+    margin: 0.5rem 0;
+    font-weight: 800;
+}
+
+.user-taste h5,
+.famous-artist h5,
+.recently-played h4 {
+    color: var(--text-second-color);
+}
+
+.album {
+    flex-wrap: wrap;
+    margin: 0 -5px;
+}
+
+.album .item {
+    width: calc(100% / 2 - 10px);
+    margin: 0 5px;
+    margin-bottom: 0.5rem;
+    align-self: stretch;
+}
+
+.album .item .music-cover img {
+    width: 100%;
+}
+
+.album .item .music-description {
+    text-align: center;
+}
+
+.famous-artist > .album .item .music-cover img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
 
 
 /******************* FOOTER *********************/
 
 footer {
     position: absolute;
-    bottom: 0;
-    background-color: var(--footer-bg-color);
     width: 100%;
+    z-index: 400;
+    background-color: var(--footer-bg-color);
     height: 5rem;
-}
+} 
 
 
 /********************* MEDIA QUERIES ****************
@@ -175,22 +268,27 @@ footer {
 
 @media screen and (min-width: 552px) {
 
+  
+    
+    
+}
+
+/********** TABLET LARGE ***********/
+
+
+@media screen and (min-width: 640px) {
+
+
     header {
-        position: fixed;
-        top: 0;
-        left: 241px;
-        width: calc(100% - 241px);
         height: 5rem;
     }
 
     aside {
-        position: fixed;
-        top: 0;
-        left: 0;
         width: 241px;
-        height: calc(100vh - 5rem);
         background-color: var(--aside-bg-color);
         padding: 1.3rem 0 0.5rem 1.3rem;
+        justify-content: flex-start;
+        position: relative;
     }
 
     aside img {
@@ -198,9 +296,9 @@ footer {
     }
 
     aside li > a:hover,
-    aside li > button:hover,
-    aside li > span:hover,
-    .download a:hover {
+    .download a:hover,
+    aside > .create-btn:hover button,
+    aside > .create-btn:hover span  {
     cursor: pointer;
     color: #fff;
     }
@@ -217,7 +315,7 @@ footer {
     }
 
     .menu-nav ul li:not(li:nth-of-type(1)) {
-        margin-bottom: 0.5rem;
+        margin-top: 0.3rem;
     }
 
     .spotify-logo-sm {
@@ -229,24 +327,21 @@ footer {
         margin-bottom: 0.1rem;
     }
 
-    aside .playlist-ctn {
-        height: 80%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
     aside .menu-nav ul,
     aside .playlist-ctn .playlist-top,
     aside .playlist-ctn .playlist-bottom {
         align-items: flex-start;
     }
 
-    aside .playlist-ctn .playlist-top {
+    .playlist-ctn {
+        display: flex;
+        flex-direction: column;
+        height: 80%;
+        justify-content: space-between;
         overflow: auto;
     }
 
-    .playlist-top button {
+    aside button {
         background-color: var(--text-second-color);
         color: var(--aside-bg-color);
         border: 0;
@@ -256,11 +351,12 @@ footer {
         margin-right: 0.4rem;
     }
 
+
     .playlist-ctn .playlist-bottom .download a > img {
         margin: 0;
     }
 
-   .playlist-top h3,
+   aside h3,
    .playlist-bottom .user-acc a > span {
     color: #fff;
     font-weight: 800;
@@ -272,34 +368,24 @@ footer {
     }
 
     main {
-        position: relative;
-        top: 5rem;
-        left: 241px;
         background-color: var(--main-bg-color);
-        height: calc(100vh - 10rem);
         width: calc(100% - 241px);
         overflow: auto;
     }
 
+    
     footer {
         position: absolute;
-        bottom: 0;
-        background-color: var(--footer-bg-color);
         width: 100%;
+        z-index: 400;
+        background-color: var(--footer-bg-color);
         height: 5rem;
-    }  
+    } 
 
     .hidden {
         display: inline-block;
     }
-    
-}
-
-/********** TABLET LARGE ***********/
-
-
-@media screen and (min-width: 640px) {
-    
+  
 }
 
 /********** LAPTOP TO LARGER DESKTOP  ***********/
@@ -308,39 +394,35 @@ footer {
 @media screen and (min-width: 878px) {
 
     header {
-        position: fixed;
-        top: 0;
-        left: 241px;
-        width: calc(100% - 241px);
         height: 5rem;
     }
 
     aside {
-        position: fixed;
-        top: 0;
-        left: 0;
         width: 241px;
-        height: calc(100vh - 5rem);
         background-color: var(--aside-bg-color);
     }
 
     main {
-        position: relative;
-        top: 5rem;
-        left: 241px;
         background-color: var(--main-bg-color);
-        height: calc(100vh - 10rem);
         width: calc(100% - 241px);
         overflow: auto;
     }
-
+      
+    .album .item {
+        width: calc(100% / 4 - 10px);
+        margin: 0 5px;
+        margin-bottom: 0.5rem;
+        align-self: stretch;
+    }
+    
     footer {
         position: absolute;
-        bottom: 0;
-        background-color: var(--footer-bg-color);
         width: 100%;
+        z-index: 400;
+        background-color: var(--footer-bg-color);
         height: 5rem;
-    }  
+    } 
+
     
 }
    
