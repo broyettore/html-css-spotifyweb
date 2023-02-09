@@ -290,15 +290,16 @@ footer {
     color: var(--text-color);
     height: 5rem;
     justify-content: space-between;
+    padding: 0 1rem;
 } 
 
 footer .left,
 footer .right {
     width: 25%;
-    padding-left: 1.3rem;
 }
 
 footer .center {
+    justify-content: center;
     width: 50%;
 }
 
@@ -326,6 +327,7 @@ footer .left .song-playing img {
     width: 100%;
 }
 
+
 footer .left .song .song-name,
 footer .left .like {
     color: var(--text-second-color);
@@ -352,7 +354,7 @@ footer .right ul li:nth-of-type(4) {
 }
 
 footer .center .options-bar > div {
-    width: 150px;
+    width: 100px;
 }
 
 footer .right ul li:nth-of-type(4) > .volume-bar,
@@ -374,6 +376,14 @@ footer .center .options ul li .fa-circle-play {
     font-size: 1.8rem;
 }
 
+footer i {
+    cursor: pointer;
+}
+
+footer .like > div:hover i {
+    color: var(--text-color);
+}
+
 
 /********************* MEDIA QUERIES ****************
 ******************************************************/
@@ -382,20 +392,6 @@ footer .center .options ul li .fa-circle-play {
 
 @media screen and (min-width: 552px) {
 
-  
-    
-    
-}
-
-/********** TABLET LARGE ***********/
-
-
-@media screen and (min-width: 640px) {
-
-
-    header {
-        height: 5rem;
-    }
 
     aside {
         width: 241px;
@@ -403,6 +399,10 @@ footer .center .options ul li .fa-circle-play {
         padding: 1.3rem 0 0.5rem 1.3rem;
         justify-content: flex-start;
         position: relative;
+    }
+    
+    header {
+        height: 5rem;
     }
 
     aside img {
@@ -465,16 +465,19 @@ footer .center .options ul li .fa-circle-play {
         margin-right: 0.4rem;
     }
 
-
     .playlist-ctn .playlist-bottom .download a > img {
         margin: 0;
     }
 
-   aside h3,
-   .playlist-bottom .user-acc a > span {
-    color: #fff;
-    font-weight: 800;
-   }
+    aside h3 {
+        margin-top: 1rem;
+    }
+
+    aside h3,
+    .playlist-bottom .user-acc a > span {
+        color: #fff;
+        font-weight: 800;
+    }
 
     hr {
         width: 90%;
@@ -485,6 +488,13 @@ footer .center .options ul li .fa-circle-play {
         background-color: var(--main-bg-color);
         width: calc(100% - 241px);
         overflow: auto;
+    }
+
+    .album .item {
+        width: calc(100% / 2 - 10px);
+        margin: 0 5px;
+        margin-bottom: 0.5rem;
+        align-self: stretch;
     }
 
     
@@ -513,23 +523,50 @@ footer .center .options ul li .fa-circle-play {
     }
 
     footer .right ul li:nth-of-type(4) {
-        width: 100px;
+        width: 80px;
     }
     
     footer .center .options-bar > div {
-        width: 180px;
+        width: 120px;
     }
-  
+    
+    
+}
+
+/********** TABLET LARGE ***********/
+
+
+@media screen and (min-width: 640px) {
+
+    .album .item {
+        width: calc(100% / 4 - 10px);
+        margin: 0 5px;
+        margin-bottom: 0.5rem;
+        align-self: stretch;
+    }
+
+
+    footer .right ul li:nth-of-type(4) {
+        width: 80px;
+    }
+    
+    footer .center .options-bar > div {
+        width: 190px;
+    }
+
+    footer .right ul li {
+        margin: 6px;
+    }
+    
+    
+
+
 }
 
 /********** LAPTOP TO LARGER DESKTOP  ***********/
 
 
 @media screen and (min-width: 878px) {
-
-    header {
-        height: 5rem;
-    }
 
     aside {
         width: 241px;
@@ -543,7 +580,7 @@ footer .center .options ul li .fa-circle-play {
     }
       
     .album .item {
-        width: calc(100% / 4 - 10px);
+        width: calc(100% / 6 - 10px);
         margin: 0 5px;
         margin-bottom: 0.5rem;
         align-self: stretch;
@@ -562,7 +599,7 @@ footer .center .options ul li .fa-circle-play {
     }
     
     footer .center .options-bar > div {
-        width: 250px;
+        width: 350px;
     }
 
     footer .right ul li {
