@@ -237,7 +237,6 @@ main {
     color: var(--text-color);
 }
 
-
 .recently-played,
 .user-taste,
 .famous-artist {
@@ -283,6 +282,7 @@ main {
 
 .album .item .music-cover img {
     width: 100%;
+    display: block;
 }
 
 .album .item .music-description {
@@ -294,8 +294,29 @@ main {
     object-fit: cover;
 }
 
+.music-cover {
+    position: relative;
+}
 
+.play-hover i {
+    font-size: 4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
+.music-cover:hover {
+    cursor: pointer;
+}
+
+.music-cover:hover img {
+    opacity: 0.5;
+}
+
+.music-cover:hover .play-hover {
+    display: block;
+}
 
 /******************* FOOTER *********************/
 
