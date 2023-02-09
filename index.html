@@ -13,10 +13,11 @@
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
 </head>
 <body>
-
+    <!-- structure top part container  -->
     <div class="container-top row">
         <!-- aside  -->
         <aside>
+            <!-- logo and menu icons  -->
             <nav class="menu-nav">
                 <ul class="column-center">
                     <li>
@@ -43,58 +44,62 @@
                             <span class="hidden">La tua libreria</span>
                         </a>
                     </li>
-                        
                 </ul>
             </nav>
+            <!-- /logo and menu icons  -->
+            <!-- playlist title and button  -->
             <h3 class="mb-10 hidden">Playlist</h3>
-            <div class="create-btn mb-10 hidden">
+            <div class="create-btn mb-10 hidden-block">
                 <button><i class="fa-solid fa-plus"></i></button>
                 <span>Crea Playlist</span>
             </div>
-            <div class="playlist-ctn">
-                <div class="playlist-top hidden column-center">
-                    <nav>
-                        <ul class="column">
-                            <li class="mb-10">
-                                <a href="#">Nome playlist</a>
-                            </li>
-                            <li class="mb-10">
-                                <a href="#">Nome playlist</a>
-                            </li>
-                            <li class="mb-10">
-                                <a href="#">Nome playlist</a>
-                            </li>
-                            <li class="mb-10">
-                                <a href="#">Nome playlist</a>
-                            </li>
-                            <li class="mb-10">
-                                <a href="#">Nome playlist</a>
-                            </li>
-                            <li class="mb-10">
-                                <a href="#">Nome playlist</a>
-                            </li>
-                            <li class="mb-10">
-                                <a href="#">Nome playlist</a>
-                            </li>
-                        </ul>
-                    </nav>
+            <!-- /playlist title and button  -->
+            <!-- playlist  -->
+            <div class="playlist-top hidden column-center">
+                <nav>
+                    <ul class="column">
+                        <li class="mb-10">
+                            <a href="#">Nome playlist</a>
+                        </li>
+                        <li class="mb-10">
+                            <a href="#">Nome playlist</a>
+                        </li>
+                        <li class="mb-10">
+                            <a href="#">Nome playlist</a>
+                        </li>
+                        <li class="mb-10">
+                            <a href="#">Nome playlist</a>
+                        </li>
+                        <li class="mb-10">
+                            <a href="#">Nome playlist</a>
+                        </li>
+                        <li class="mb-10">
+                            <a href="#">Nome playlist</a>
+                        </li>
+                        <li class="mb-10">
+                            <a href="#">Nome playlist</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- /playlist  -->
+            <!-- download and profile  -->
+            <div class="playlist-bottom column-center">
+                <div class="download">
+                    <a href="#">
+                        <img src="assets/img/download.svg" alt="download icon">
+                        <span class="hidden">Installa app</span>
+                    </a>
                 </div>
-                <div class="playlist-bottom column-center">
-                    <div class="download">
-                        <a href="#">
-                            <img src="assets/img/download.svg" alt="download icon">
-                            <span class="hidden">Installa app</span>
-                        </a>
-                    </div>
-                    <hr class="hidden">
-                    <div class="user-acc">
-                        <a href="#">
-                            <img src="assets/img/profile.svg" alt="profile icon">
-                            <span class="hidden">Roy Bagnarola</span>
-                        </a>
-                    </div>
+                <hr class="hidden">
+                <div class="user-acc">
+                    <a href="#">
+                        <img src="assets/img/profile.svg" alt="profile icon">
+                        <span class="hidden">Roy Bagnarola</span>
+                    </a>
                 </div>
             </div>
+             <!-- /download and profile  -->
         
         </aside>
         <!-- /aside  -->
@@ -112,7 +117,9 @@
                 </div>
             </header>
             <!-- /main header  -->
+            <!-- main central part  -->
             <div class="main-content column">
+                <!-- main menu  -->
                 <nav>
                     <ul class="row">
                         <li>
@@ -135,7 +142,8 @@
                         </li>
                     </ul>
                 </nav>
-
+                <!-- /main menu  -->
+                <!-- Recently Played section  -->
                 <section class="recently-played">
                     <h2>Recently played</h2>
                     <div class="album row">
@@ -202,7 +210,8 @@
                         </div>
                     </div>
                 </section>
-
+                <!-- /Recently Played section  -->
+                <!-- User custom playlist section  -->
                 <section class="user-taste">
                     <h2>Creato per Roy Bagnarola</h2>
                     <h5>Più ascolti, più accurati saranno i suggerimenti</h5>
@@ -226,6 +235,8 @@
                             </div>
                         </div>
                 </section>
+                <!-- /User custom playlist section  -->
+                <!-- Famous artists section  -->
                 <section class="famous-artist">
                     <h2>Artisti più popolari</h2>
                     <h5>Più ascolti, più accurati saranno i suggerimenti</h5>
@@ -249,16 +260,17 @@
                             </div>
                         </div>
                 </section>
+                  <!-- Famous artists section  -->
             </div>
-
-
+            <!-- main central part  -->
         </main>
         <!-- /main  -->
     </div>
-    
+      <!-- structure top part container  -->
     
     <!-- footder  -->
     <footer class="row">
+        <!-- footer left part -->
         <div class="left row">
             <div class="song row">
                 <div class="song-playing">
@@ -274,6 +286,8 @@
                 <div><i class="fa-regular fa-folder"></i></div>
             </div>
         </div>
+        <!-- /footer left part -->
+        <!-- footer central part -->
         <div class="center column-center">
             <div class="options">
                 <ul class="row">
@@ -292,6 +306,8 @@
                 <span class="ml-3">4:35</span>
             </div>
         </div>
+        <!-- /footer central part -->
+        <!-- footer right part -->
         <div class="right">
             <ul class="row">
                 <li><i class="fa-solid fa-list"></i></li>
@@ -300,10 +316,9 @@
                 <li><div class="volume-bar"></div></li>
             </ul>
         </div>
+        <!-- /footer right part -->
     </footer>
     <!-- /footer  -->
 
-
-    
 </body>
 </html>

@@ -47,8 +47,6 @@ html {
     border-radius: 10px;
     border: 3px none #ffffff;
   }
-  
-
 
 /************** REUSABLE CLASSES ***************
 **************************************************/
@@ -103,7 +101,6 @@ button:hover {
     height: calc(100vh - 5rem);
 }
 
-
 /******************* HEADER *********************/
 
 header {
@@ -136,7 +133,6 @@ header .upgrade .btn:hover {
     transform: scale(1.070);
 }
 
-
 /******************* ASIDE *********************/
 
 aside {
@@ -148,7 +144,7 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow: hidden;
+    overflow-y: auto;
 }
 
 .menu-nav ul li:nth-of-type(1) {
@@ -168,17 +164,16 @@ aside img:hover {
 }
 
 aside .menu-nav img:not(.spotify-logo-lg),
-aside .playlist-ctn .playlist-bottom img {
+.playlist-bottom img {
     width: 28px;
 }
 
-
-.playlist-ctn .playlist-bottom .download a > img {
+.playlist-bottom .download a > img {
     width: 1.4rem;
     margin-bottom: 1rem;
 }
 
-.playlist-ctn .playlist-bottom .user-acc a > img {
+.playlist-bottom .user-acc a > img {
     background-color: #808080;
     border-radius: 50%;
 }
@@ -189,7 +184,7 @@ main {
     background-color: var(--main-bg-color);
     height: 100%;
     width: calc(100% - 50px);
-    overflow: auto;
+    overflow-y: auto;
     position: relative;
 }
 
@@ -366,7 +361,6 @@ footer .left .song-playing img {
     width: 100%;
 }
 
-
 footer .left .song .song-name,
 footer .left .like {
     color: var(--text-second-color);
@@ -431,19 +425,12 @@ footer .like > div:hover i {
 
 @media screen and (min-width: 552px) {
 
-
     aside {
         width: 241px;
-        background-color: var(--aside-bg-color);
         padding: 1.3rem 0 0.5rem 1.3rem;
         justify-content: flex-start;
-        position: relative;
     }
     
-    header {
-        height: 5rem;
-    }
-
     aside img {
         margin-right: 0.2rem;
     }
@@ -462,11 +449,6 @@ footer .like > div:hover i {
         vertical-align: middle;
     }
 
-    aside .menu-nav img:not(.spotify-logo-lg),
-    aside .playlist-ctn .playlist-bottom img {
-    width: 24px;
-    }
-
     .menu-nav ul li:not(li:nth-of-type(1)) {
         margin-top: 0.3rem;
     }
@@ -477,21 +459,18 @@ footer .like > div:hover i {
 
     .spotify-logo-lg {
         width: 130px;
-        margin-bottom: 0.1rem;
+        margin-bottom: 0.5rem;
     }
 
     aside .menu-nav ul,
     aside .playlist-ctn .playlist-top,
-    aside .playlist-ctn .playlist-bottom {
+    .playlist-bottom {
         align-items: flex-start;
     }
 
-    .playlist-ctn {
-        display: flex;
-        flex-direction: column;
-        height: 80%;
-        justify-content: space-between;
-        overflow: auto;
+    .playlist-top {
+        flex-grow: 1;
+        overflow-y: auto;
     }
 
     aside button {
@@ -504,7 +483,7 @@ footer .like > div:hover i {
         margin-right: 0.4rem;
     }
 
-    .playlist-ctn .playlist-bottom .download a > img {
+    .playlist-bottom .download a > img {
         margin: 0;
     }
 
@@ -536,7 +515,6 @@ footer .like > div:hover i {
         align-self: stretch;
     }
 
-    
     footer {
         position: absolute;
         width: 100%;
@@ -547,6 +525,10 @@ footer .like > div:hover i {
 
     .hidden {
         display: inline-block;
+    }
+
+    .hidden-block {
+        display: block;
     }
 
     footer .left  .song {
@@ -569,7 +551,6 @@ footer .like > div:hover i {
         width: 120px;
     }
     
-    
 }
 
 /********** TABLET LARGE ***********/
@@ -579,11 +560,7 @@ footer .like > div:hover i {
 
     .album .item {
         width: calc(100% / 4 - 10px);
-        margin: 0 5px;
-        margin-bottom: 0.5rem;
-        align-self: stretch;
     }
-
 
     footer .right ul li:nth-of-type(4) {
         width: 80px;
@@ -596,9 +573,6 @@ footer .like > div:hover i {
     footer .right ul li {
         margin: 6px;
     }
-    
-    
-
 
 }
 
@@ -609,29 +583,15 @@ footer .like > div:hover i {
 
     aside {
         width: 241px;
-        background-color: var(--aside-bg-color);
     }
 
     main {
-        background-color: var(--main-bg-color);
         width: calc(100% - 241px);
-        overflow: auto;
     }
       
     .album .item {
         width: calc(100% / 6 - 10px);
-        margin: 0 5px;
-        margin-bottom: 0.5rem;
-        align-self: stretch;
     }
-    
-    footer {
-        position: absolute;
-        width: 100%;
-        z-index: 400;
-        background-color: var(--footer-bg-color);
-        height: 5rem;
-    } 
 
     footer .right ul li:nth-of-type(4) {
         width: 120px;
@@ -644,7 +604,6 @@ footer .like > div:hover i {
     footer .right ul li {
         margin: 6px;
     }
-
-    
+ 
 }
    
