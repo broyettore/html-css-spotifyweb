@@ -259,6 +259,7 @@ main {
 .user-taste h3,
 .famous-artist h3 {
     margin: 0.5rem 0;
+    font-size: 1.1rem;
     font-weight: 800;
 }
 
