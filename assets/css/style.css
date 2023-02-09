@@ -400,12 +400,23 @@ footer .center .options-bar .options-volume-bar {
     width: 40%;
 }
 
+footer .right ul li:nth-of-type(4):hover > .volume-bar,
+footer .center .options-bar > div:hover  .options-volume-bar {
+    cursor: pointer;
+    background-color: #a9f92f;
+}
+
 footer .center .options ul li {
     padding: 8px;
 }
 
 footer .center .options ul li i {
     font-size: 1rem;
+    transition: ease .30s;
+}
+
+footer .center .options ul li i:hover {
+    transform: scale(1.125);
 }
 
 footer .center .options ul li .fa-circle-play {
